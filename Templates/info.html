@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Crop Information</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <style>
+        body {
+            background: url('bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            text-shadow: 2px 2px 5px #000;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .container {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+        }
+
+        .card img {
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid #28a745;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .card-text {
+            font-size: 0.9rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+    </style>
+  </head>
+
+  <body>
+    <h1>Crop Information</h1>
+    <div class="container">
+      <div class="grid">
+        <!-- Cards for all crops -->
+        <div class="card">
+          <img src="{{ url_for('static', filename='1.jpg') }}" alt="Rice" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Rice</h5>
+            <p class="card-text">Rice is a staple food for a large portion of the world's population, requiring a hot and humid climate.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='2.jpg') }}" alt="Maize" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Maize</h5>
+            <p class="card-text">Maize, or corn, is a versatile crop used as food, feed, and raw material in various industries.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='3.jpg') }}" alt="Jute" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Jute</h5>
+            <p class="card-text">Jute is used in making ropes, sacks, and mats, thriving in regions with high rainfall.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='4.jpg') }}" alt="Cotton" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Cotton</h5>
+            <p class="card-text">Cotton is a vital crop for the textile industry, requiring a warm climate for growth.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='5.jpg') }}" alt="Coconut" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Coconut</h5>
+            <p class="card-text">Coconut is used for food, oil, and coir, thriving in tropical areas with plenty of rainfall.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='6.jpg') }}" alt="Papaya" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Papaya</h5>
+            <p class="card-text">Papaya is a tropical fruit rich in vitamins and antioxidants, requiring warm climates.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='7.jpg') }}" alt="Orange" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Orange</h5>
+            <p class="card-text">Oranges are juicy citrus fruits high in vitamin C, thriving in subtropical climates.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='8.jpg') }}" alt="Apple" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Apple</h5>
+            <p class="card-text">Apples are popular fruits requiring a temperate climate for cultivation.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='9.jpg') }}" alt="Muskmelon" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Muskmelon</h5>
+            <p class="card-text">Muskmelons are refreshing fruits, rich in vitamins A and C, grown during warm seasons.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='10.jpg') }}" alt="Watermelon" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Watermelon</h5>
+            <p class="card-text">Watermelons are sweet, juicy fruits perfect for hot climates, rich in water and nutrients.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='11.jpg') }}" alt="Grapes" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Grapes</h5>
+            <p class="card-text">Grapes are grown for wine, juice, and consumption, requiring a warm climate with moderate humidity.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='12.jpg') }}" alt="Mango" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Mango</h5>
+            <p class="card-text">Mango, the "King of Fruits," is a tropical delight needing plenty of sunlight and warmth.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='13.jpg') }}" alt="Banana" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Banana</h5>
+            <p class="card-text">Bananas are a staple fruit, grown in warm and humid regions, rich in potassium.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='14.jpg') }}" alt="Pomegranate" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Pomegranate</h5>
+            <p class="card-text">Pomegranates are valued for their seeds and juice, requiring dry and subtropical climates.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='15.jpg') }}" alt="Lentil" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Lentil</h5>
+            <p class="card-text">Lentils are high-protein legumes grown in temperate climates with moderate water needs.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='16.jpg') }}" alt="Blackgram" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Blackgram</h5>
+            <p class="card-text">Blackgram is a legume widely used in Indian cuisine, thriving in warm regions.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='17.jpg') }}" alt="Mungbean" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Mungbean</h5>
+            <p class="card-text">Mungbeans are nutritious legumes, rich in protein, grown in warm climates.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='18.jpg') }}" alt="Mothbeans" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Mothbeans</h5>
+            <p class="card-text">Mothbeans are drought-resistant legumes grown in arid and semi-arid regions.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='19.jpg') }}" alt="Pigeonpeas" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Pigeonpeas</h5>
+            <p class="card-text">Pigeonpeas are widely grown for their protein-rich seeds, requiring warm climates.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='20.jpg') }}" alt="Kidneybeans" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Kidneybeans</h5>
+            <p class="card-text">Kidneybeans are a staple legume, grown in temperate climates, rich in protein and fiber.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='21.jpg') }}" alt="Chickpea" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Chickpea</h5>
+            <p class="card-text">Chickpeas are versatile legumes, grown in dry climates, popular for making hummus.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{{ url_for('static', filename='22.jpg') }}" alt="Coffee" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Coffee</h5>
+            <p class="card-text">Coffee is a globally loved beverage crop, grown in tropical regions with specific altitudes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
+</html>
